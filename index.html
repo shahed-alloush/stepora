@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stepora — practical courses, clear learning paths, and real progress, all in one place.">
+        <title>Stepora | Learn. Build. Grow.</title>
+        <!-- ضبط الوضع الليلي مبكراً قبل ظهور الصفحة -->
+        <script>
+            (function () {
+                try {
+                    var t = localStorage.getItem('theme');
+                    if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+                    document.documentElement.setAttribute('data-theme', t);
+                    document.documentElement.setAttribute('data-bs-theme', t);
+                } catch (e) {}
+            })();
+        </script>
+        <!--  استدعاء ملف البوتوستراب  -->
+        <link href="css/Bootstrapvarsio5.css" rel="stylesheet"/>
+        <!-- ملف أيقونات بوتستراب -->
+        <link rel="stylesheet" href="css/bootstrap-icons.min.css"/>
+        <!-- ملف التنسيقات الخاص بي (ناتج من style.scss) -->
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- أيقونة الموقع -->
+        <link rel="shortcut icon" href="image/favicon.svg" type="image/svg+xml">
+    </head>
+    <body>
+        <main>
+            <!-- start nav -->
+            <nav class="navbar navbar-expand-lg" id="siteHeader">
+                <div class="container">
+                    <a class="navbar-brand" href="#home">
+                        <img src="image/logo-mark.svg" alt="">
+                        <p>Stepora</p>
+                    </a>
+                    <!-- أزرار الموبايل (الوضع الليلي + القائمة) -->
+                    <div class="mobile d-lg-none">
+                        <button type="button" class="btn btn2" aria-label="Toggle dark mode">
+                            <i class="bi bi-moon-stars i1"></i>
+                            <i class="bi bi-sun i2"></i>
+                        </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#courses">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#category">Learning Paths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#steps">About</a>
+                            </li>
+                        </ul>
+                        <div class="buttons">
+                            <button type="button" class="btn btn1 d-none d-lg-inline-flex" aria-label="Search"><i class="bi bi-search"></i></button>
+                            <button type="button" class="btn btn2 d-none d-lg-inline-flex" aria-label="Toggle dark mode">
+                                <i class="bi bi-moon-stars i1"></i>
+                                <i class="bi bi-sun i2"></i>
+                            </button>
+                            <a href="#" class="btn btn3">Log in</a>
+                            <a href="#" class="btn btn4">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end nav -->
+            <!-- start home -->
+            <section class="home" id="home">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="d1">
+                                <i class="bi bi-stars"></i>
+                                <p>New paths every month</p>
+                            </div>
+                            <h1 class="p1">Learn skills that move you <span>forward.</span></h1>
+                            <p class="p2">Practical courses, clear learning paths, and real progress — all in one place.</p>
+                            <div class="d2">
+                                <a href="#courses" class="a1">Explore Courses <i class="bi bi-arrow-right"></i></a>
+                                <a href="#category" class="a2">View Learning Paths</a>
+                            </div>
+                            <div class="d3">
+                                <div class="a1">
+                                    <span><i class="bi bi-people"></i></span>
+                                    <div>
+                                        <p class="p1">10k+</p>
+                                        <p class="p2">Active learners</p>
+                                    </div>
+                                </div>
+                                <div class="a2">
+                                    <span><i class="bi bi-journal-bookmark"></i></span>
+                                    <div>
+                                        <p class="p1">50+</p>
+                                        <p class="p2">Courses</p>
+                                    </div>
+                                </div>
+                                <div class="a3">
+                                    <span><i class="bi bi-star"></i></span>
+                                    <div>
+                                        <p class="p1">4.8</p>
+                                        <p class="p2">Average rating</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <div class="allall">
+                                <img src="image/hero.svg" alt="Laptop with code editor, surrounded by learning badges" class="img1">
+                                <div class="d1">
+                                    <div class="m1">
+                                        <span><i class="bi bi-mortarboard"></i></span>
+                                        <div>
+                                            <p class="p1">Frontend Development</p>
+                                            <p class="p2">Module 1 · Foundations</p>
+                                        </div>
+                                    </div>
+                                    <div class="m2">
+                                        <div class="a1">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <p>HTML Basics</p>
+                                            <span>18 min</span>
+                                        </div>
+                                        <div class="a2">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <p>CSS Fundamentals</p>
+                                            <span>24 min</span>
+                                        </div>
+                                        <div class="a3">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                            <p>JavaScript Basics</p>
+                                            <span>32 min</span>
+                                        </div>
+                                        <div class="a4">
+                                            <i class="bi bi-circle"></i>
+                                            <p>Responsive Design</p>
+                                            <span>20 min</span>
+                                        </div>
+                                    </div>
+                                    <a href="#courses" class="m3">Continue lesson <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end home -->
+            <!-- start category -->
+            <section class="category" id="category">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="m1">
+                                <h2 class="p1">Explore by Category</h2>
+                                <p class="p2">Find the right course for your goals.</p>
+                            </div>
+                            <a href="#" class="m2">View all categories <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="div2">
+                            <a href="#" class="m1">
+                                <span class="a1"><i class="bi bi-code-slash"></i></span>
+                                <p class="p1">Development</p>
+                                <p class="p2">Build real-world projects and improve your coding skills.</p>
+                                <div class="a2">
+                                    <p>18 courses</p>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="m2">
+                                <span class="a1"><i class="bi bi-vector-pen"></i></span>
+                                <p class="p1">UI/UX Design</p>
+                                <p class="p2">Design beautiful and user-friendly experiences.</p>
+                                <div class="a2">
+                                    <p>12 courses</p>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="m3">
+                                <span class="a1"><i class="bi bi-bar-chart-line"></i></span>
+                                <p class="p1">Data Science</p>
+                                <p class="p2">Turn data into insights and make an impact.</p>
+                                <div class="a2">
+                                    <p>10 courses</p>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="m4">
+                                <span class="a1"><i class="bi bi-briefcase"></i></span>
+                                <p class="p1">Business</p>
+                                <p class="p2">Grow your skills for a successful career.</p>
+                                <div class="a2">
+                                    <p>8 courses</p>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end category -->
+            <!-- start courses -->
+            <section class="courses" id="courses">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="m1">
+                                <h2 class="p1">Featured Courses</h2>
+                                <p class="p2">Start your learning journey with our most popular courses.</p>
+                            </div>
+                            <a href="#" class="m2">View all courses <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="div2">
+                            <div class="m1">
+                                <div class="a1">
+                                    <img src="image/course1.svg" alt="Browser window with code illustration">
+                                    <p class="p1">Beginner</p>
+                                </div>
+                                <div class="a2">
+                                    <a href="#" class="p1">Frontend Development</a>
+                                    <div class="p2">
+                                        <img src="image/sara-ahmed.svg" alt="">
+                                        <p>Sara Ahmed</p>
+                                    </div>
+                                    <div class="p3">
+                                        <div class="s1">
+                                            <i class="bi bi-clock"></i>
+                                            <p>12h</p>
+                                        </div>
+                                        <div class="s2">
+                                            <i class="bi bi-play-btn"></i>
+                                            <p>28 lessons</p>
+                                        </div>
+                                        <div class="s3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <p>4.7 <span>(1.2k)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a3">
+                                    <p class="p1">Free</p>
+                                    <a href="#" aria-label="Open Frontend Development course"><i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="m2">
+                                <div class="a1">
+                                    <img src="image/course2.svg" alt="Design artboard and pen tool illustration">
+                                    <p class="p1">Beginner</p>
+                                </div>
+                                <div class="a2">
+                                    <a href="#" class="p1">UI/UX Design with Figma</a>
+                                    <div class="p2">
+                                        <img src="image/omar-khaled.svg" alt="">
+                                        <p>Omar Khaled</p>
+                                    </div>
+                                    <div class="p3">
+                                        <div class="s1">
+                                            <i class="bi bi-clock"></i>
+                                            <p>10h</p>
+                                        </div>
+                                        <div class="s2">
+                                            <i class="bi bi-play-btn"></i>
+                                            <p>20 lessons</p>
+                                        </div>
+                                        <div class="s3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <p>4.6 <span>(892)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a3">
+                                    <p class="p1">Free</p>
+                                    <a href="#" aria-label="Open UI/UX Design course"><i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="m3">
+                                <div class="a1">
+                                    <img src="image/course3.svg" alt="Charts and data table illustration">
+                                    <p class="p1">Intermediate</p>
+                                </div>
+                                <div class="a2">
+                                    <a href="#" class="p1">Python for Data Analysis</a>
+                                    <div class="p2">
+                                        <img src="image/lina-mustafa.svg" alt="">
+                                        <p>Lina Mustafa</p>
+                                    </div>
+                                    <div class="p3">
+                                        <div class="s1">
+                                            <i class="bi bi-clock"></i>
+                                            <p>15h</p>
+                                        </div>
+                                        <div class="s2">
+                                            <i class="bi bi-play-btn"></i>
+                                            <p>32 lessons</p>
+                                        </div>
+                                        <div class="s3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <p>4.8 <span>(1.4k)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a3">
+                                    <p class="p2">$49</p>
+                                    <a href="#" aria-label="Open Python for Data Analysis course"><i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end courses -->
+            <!-- start track -->
+            <section class="track" id="track">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <p class="p1">Your dashboard</p>
+                            <h2 class="p2">Your Progress, Your Pace</h2>
+                            <p class="p3">Track your learning, celebrate your wins, and keep going — everything lives in one simple dashboard.</p>
+                            <div class="d1">
+                                <div class="m1">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <p>stepora.app/dashboard</p>
+                                </div>
+                                <div class="m2">
+                                    <div class="a1">
+                                        <div class="s1">
+                                            <span><i class="bi bi-journal-check"></i></span>
+                                            <div>
+                                                <p class="t1">12</p>
+                                                <p class="t2">Lessons completed</p>
+                                            </div>
+                                        </div>
+                                        <div class="s2">
+                                            <span><i class="bi bi-clock-history"></i></span>
+                                            <div>
+                                                <p class="t1">4.5h</p>
+                                                <p class="t2">Hours learned</p>
+                                            </div>
+                                        </div>
+                                        <div class="s3">
+                                            <span><i class="bi bi-lightning-charge"></i></span>
+                                            <div>
+                                                <p class="t1">3</p>
+                                                <p class="t2">Skills in progress</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a2">
+                                        <div class="s1">
+                                            <p class="t1">Learning path</p>
+                                            <div class="t2">
+                                                <span class="k1"><i class="bi bi-window-sidebar"></i></span>
+                                                <div class="k2">
+                                                    <div class="w1">
+                                                        <p>Web Development Path</p>
+                                                        <span>60%</span>
+                                                    </div>
+                                                    <div class="w2" role="progressbar" aria-label="Web Development Path progress" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                                        <span data-value="60"></span>
+                                                    </div>
+                                                    <p class="w3">Next: JavaScript Basics</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s2">
+                                            <span class="k1"><i class="bi bi-award-fill"></i></span>
+                                            <div class="k2">
+                                                <p class="w1">Beginner Explorer</p>
+                                                <p class="w2">Completed 5 lessons</p>
+                                                <a href="#">View all badges <i class="bi bi-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <img src="image/progress.svg" alt="Growing bar chart with a trophy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end track -->
+            <!-- start steps -->
+            <section class="steps" id="steps">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="m1">
+                                <h2 class="p1">How Stepora Works</h2>
+                                <p class="p2">Getting started is easy. Just follow these simple steps.</p>
+                            </div>
+                            <a href="#" class="m2">Start today <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="div2">
+                            <div class="m1">
+                                <div class="a1">
+                                    <i class="bi bi-search"></i>
+                                    <p>1</p>
+                                </div>
+                                <p class="p1">Choose your path</p>
+                                <p class="p2">Explore categories and find what interests you.</p>
+                            </div>
+                            <div class="m2">
+                                <div class="a1">
+                                    <i class="bi bi-laptop"></i>
+                                    <p>2</p>
+                                </div>
+                                <p class="p1">Learn by doing</p>
+                                <p class="p2">Watch, practice, and build real projects.</p>
+                            </div>
+                            <div class="m3">
+                                <div class="a1">
+                                    <i class="bi bi-star"></i>
+                                    <p>3</p>
+                                </div>
+                                <p class="p1">Track &amp; celebrate</p>
+                                <p class="p2">Earn badges and see your growth over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end steps -->
+            <!-- start stories -->
+            <section class="stories" id="stories">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="m1">
+                                <h2 class="p1">Learner Stories</h2>
+                                <p class="p2">Real people. Real progress.</p>
+                            </div>
+                            <a href="#" class="m2">View more stories <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="div2">
+                            <div class="m1">
+                                <i class="bi bi-quote a0"></i>
+                                <p class="p1">The courses are well-structured and easy to follow. I've already built my first website!</p>
+                                <div class="a1">
+                                    <img src="image/rana-khaled.svg" alt="">
+                                    <div class="s0">
+                                        <p class="s1">Rana Khaled</p>
+                                        <p class="s2">Web Development Learner</p>
+                                    </div>
+                                    <div class="s3" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m2">
+                                <i class="bi bi-quote a0"></i>
+                                <p class="p1">I love how practical the lessons are. The Figma course helped me get my first freelance project!</p>
+                                <div class="a1">
+                                    <img src="image/omar-saleh.svg" alt="">
+                                    <div class="s0">
+                                        <p class="s1">Omar Saleh</p>
+                                        <p class="s2">UI/UX Design Learner</p>
+                                    </div>
+                                    <div class="s3" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m3">
+                                <i class="bi bi-quote a0"></i>
+                                <p class="p1">Stepora made learning Data Science so much easier. The progress tracker keeps me motivated!</p>
+                                <div class="a1">
+                                    <img src="image/maya-ibrahim.svg" alt="">
+                                    <div class="s0">
+                                        <p class="s1">Maya Ibrahim</p>
+                                        <p class="s2">Data Science Learner</p>
+                                    </div>
+                                    <div class="s3" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end stories -->
+            <!-- start start -->
+            <section class="start">
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <h2 class="m1">Small steps. <span>Real progress.</span></h2>
+                            <p class="m2">Start building skills you can use in the real world.</p>
+                            <a href="#courses" class="a1">Start Learning <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="div2">
+                            <img src="image/start.svg" alt="Laptop, coffee mug and plant on a desk">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end start -->
+            <!-- start footer -->
+            <footer>
+                <div class="container">
+                    <div class="all">
+                        <div class="div1">
+                            <div class="m1">
+                                <a href="#home" class="p1">
+                                    <img src="image/logo-mark.svg" alt="">
+                                    <p>Stepora</p>
+                                </a>
+                                <p class="p2">Learn. Build. Grow.</p>
+                                <p class="p3">We're on a mission to make quality education accessible to everyone, everywhere.</p>
+                                <div class="p4">
+                                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://x.com/" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                    <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                                </div>
+                            </div>
+                            <div class="m2">
+                                <p class="s1">Platform</p>
+                                <a href="#courses" class="s2">Courses</a>
+                                <a href="#category" class="s3">Learning Paths</a>
+                                <a href="#" class="s4">For Business</a>
+                                <a href="#" class="s5">Pricing</a>
+                            </div>
+                            <div class="m3">
+                                <p class="s1">Resources</p>
+                                <a href="#" class="s2">Blog</a>
+                                <a href="#" class="s3">Help Center</a>
+                                <a href="#" class="s4">Community</a>
+                                <a href="#" class="s5">FAQs</a>
+                            </div>
+                            <div class="m4">
+                                <p class="s1">About</p>
+                                <a href="#" class="s2">Our Story</a>
+                                <a href="#" class="s3">Careers</a>
+                                <a href="#" class="s4">Contact</a>
+                            </div>
+                            <div class="m5">
+                                <p class="s1">Join our newsletter</p>
+                                <p class="s2">Get the latest courses and updates.</p>
+                                <form class="s3" id="newsletterForm" novalidate>
+                                    <input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Email address" required>
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                                <p class="s4" id="newsletterMsg" role="status" aria-live="polite"></p>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <p class="m1">&copy; <span id="year">2026</span> Stepora. All rights reserved.</p>
+                            <p class="m2">Designed &amp; Developed by <a href="https://github.com/shahed-alloush" target="_blank">Shahed Alloush</a> <i class="bi bi-heart-fill"></i></p>
+                            <div class="m3">
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </main>
+
+
+
+
+
+        <!-- ملف الجافا سكريبت الأساسي للموقع (الوضع الليلي) -->
+        <script src="js/script.js"></script>
+        <!-- مكتبة بوتستراب 5 للأجزاء التفاعلية مثل القوائم والنوافذ -->
+        <script src="js/Bootstrapvarsio5.js"></script>
+        <!-- ملف الأكواد والتخصيصات الخاصة بي -->
+        <script src="js/custom.js"></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" fill="none">
+  <defs>
+    <linearGradient id="blob" x1="80" y1="40" x2="460" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9EEFF"/>
+      <stop offset="1" stop-color="#D6E0FF"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="150" y1="120" x2="390" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2550"/>
+      <stop offset="1" stop-color="#17233D"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3CC39C"/>
+      <stop offset="1" stop-color="#1E8E70"/>
+    </linearGradient>
+    <linearGradient id="blueBtn" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5B7CFA"/>
+      <stop offset="1" stop-color="#3157D5"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#3157D5" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <!-- background blob -->
+  <path d="M96 118C130 44 236 18 330 40s156 92 148 182-70 168-170 186S110 384 76 300 62 192 96 118Z" fill="#3157D5" fill-opacity=".1"/>
+  <circle cx="58" cy="96" r="10" fill="#3157D5" fill-opacity=".2"/>
+  <circle cx="470" cy="70" r="6" fill="#3157D5" fill-opacity=".2"/>
+  <circle cx="488" cy="330" r="12" fill="#3157D5" fill-opacity=".12"/>
+  <g fill="#3157D5" fill-opacity=".35"><circle cx="420" cy="112" r="3"/><circle cx="436" cy="112" r="3"/><circle cx="420" cy="128" r="3"/><circle cx="436" cy="128" r="3"/></g>
+
+  <!-- plant -->
+  <g>
+    <path d="M430 330c-4-60 10-120 40-170" stroke="#1E8E70" stroke-width="4" stroke-linecap="round"/>
+    <path d="M444 236c-34-10-52-40-50-72 30 6 50 34 50 72Z" fill="url(#leaf)"/>
+    <path d="M452 200c22-24 52-30 74-20-10 26-40 40-74 20Z" fill="url(#leaf)" opacity=".85"/>
+    <path d="M438 290c-30 0-54-20-62-48 30-2 56 16 62 48Z" fill="url(#leaf)" opacity=".9"/>
+    <path d="M446 270c20-26 50-36 72-28-8 28-38 44-72 28Z" fill="url(#leaf)"/>
+    <rect x="404" y="322" width="56" height="58" rx="10" fill="#FFFFFF" stroke="#DCE3F7" stroke-width="2"/>
+  </g>
+
+  <!-- laptop -->
+  <g filter="url(#sh)">
+    <rect x="132" y="104" width="276" height="190" rx="14" fill="url(#screen)"/>
+    <rect x="146" y="118" width="248" height="162" rx="6" fill="#0F1934"/>
+    <path d="M100 302h340c0 14-12 26-26 26H126c-14 0-26-12-26-26Z" fill="#C7D1EC"/>
+    <rect x="236" y="302" width="68" height="7" rx="3.5" fill="#AAB6DA"/>
+  </g>
+  <!-- code lines -->
+  <g stroke-linecap="round" stroke-width="7">
+    <circle cx="162" cy="134" r="4" fill="#FF6B6B"/><circle cx="176" cy="134" r="4" fill="#FFC64B"/><circle cx="190" cy="134" r="4" fill="#3CC39C"/>
+    <path d="M166 160h40" stroke="#7B95FF"/><path d="M216 160h70" stroke="#3CC39C"/>
+    <path d="M186 180h54" stroke="#C792EA"/><path d="M250 180h90" stroke="#5A6A99"/>
+    <path d="M186 200h30" stroke="#FFC64B"/><path d="M226 200h60" stroke="#7B95FF"/>
+    <path d="M206 220h100" stroke="#5A6A99"/>
+    <path d="M186 240h46" stroke="#3CC39C"/><path d="M242 240h40" stroke="#C792EA"/>
+    <path d="M166 260h34" stroke="#7B95FF"/>
+  </g>
+
+  <!-- code badge -->
+  <g filter="url(#sh)">
+    <rect x="350" y="52" width="70" height="70" rx="18" fill="url(#blueBtn)"/>
+    <path d="M375 78l-10 9 10 9M395 78l10 9-10 9M388 74l-6 26" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- cap badge -->
+  <g filter="url(#sh)">
+    <rect x="44" y="210" width="64" height="64" rx="18" fill="#FFFFFF"/>
+    <path d="M76 228l22 10-22 10-22-10 22-10Z" fill="#26A786"/>
+    <path d="M64 243v10c0 4 6 8 12 8s12-4 12-8v-10" stroke="#26A786" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- star badge -->
+  <g filter="url(#sh)">
+    <rect x="122" y="346" width="120" height="46" rx="14" fill="#FFFFFF"/>
+    <path d="M146 357l4 8 9 1.3-6.5 6.3 1.5 9-8-4.2-8 4.2 1.5-9-6.5-6.3 9-1.3 4-8Z" fill="#FFB020"/>
+    <rect x="168" y="360" width="56" height="7" rx="3.5" fill="#17233D" opacity=".85"/>
+    <rect x="168" y="373" width="38" height="6" rx="3" fill="#A6B0C8"/>
+  </g>
+</svg>
